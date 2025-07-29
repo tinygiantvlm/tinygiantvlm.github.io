@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints."
+    />
+    <meta
+      name="keywords"
+      content="VLM, spatial reasoning, Large Language Model, LLM, multimodal, visual language model, distance estimation"
+    />
+    <meta
+      property="og:image"
+      content="https://tinygiantvlm.github.io/static/images/icon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints.
+    </title>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <!-- css  -->
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/icon.jpg" />
+
+    <!-- js  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    
+  </head>
+  <body>
+    <!-- Title, Author, Affiliation  -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints.
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="#">Vinh-Thuan Ly</a
+                  >,</span
+                >
+                <span class="author-block">
+                  <a href="#">Hoang M. Truong</a
+                  >,</span
+                >
+                <span class="author-block">
+                  <a href="#">Xuan-Huong Nguyen</a
+                  >
+                </span>
+              </div>
+
+              <br />
+              <div class="is-size-5 publication-authors">
+                <ul class="affiliation-list">
+                  <li class="affiliation">
+                    <img
+                      src="./static/images/hcmus_logo.png"
+                      alt="HCMUS Logo"
+                      class="logo"
+                    />
+                    <span class="author-block"
+                      >University of Science, VNU-HCM, Ho Chi Minh City, Vietnam</span
+                    >
+                  </li>
+                </ul>
+                <br>
+                <!-- <p> <b>CVPR 2024 </b></p> -->
+              </div>
+              <br />
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <!-- <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2401.12168"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span> -->
+                  <span class="link-block">
+                    <a
+                      href="#"
+                      class="button is-normal is-rounded is-dark" disabled
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper (Coming Soon)</span>
+                    </a>
+                  </span>
+                  <!-- Video Link. -->
+                  <!-- <span class="link-block">
+                    <a
+                      href="https://www.youtube.com/watch?v=_z9b5E_obbE"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span> -->
+                  <!-- Code  -->
+                  <!-- <span class="link-block">
+                    <a
+                      href="#community-implementation"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code (3rd party)</span>
+                    </a>
+                  </span> -->
+                  <span class="link-block">
+                    <a
+                      href="#"
+                      class="button is-normal is-rounded is-dark" disabled
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code (Coming Soon)</span>
+                    </a>
+                    </span>
+                  <!-- Data  -->
+                  <span class="link-block">
+                    <a
+                      href="https://huggingface.co/datasets/nvidia/PhysicalAI-Spatial-Intelligence-Warehouse"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </a>
+                  </span> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Abstract. -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+              Reasoning about fine-grained spatial relationships in
+              warehouse-scale environments poses a significant challenge
+              for existing vision-language models (VLMs), which often
+              struggle to comprehend 3D layouts, object arrangements,
+              and multimodal cues in real-world industrial settings. 
+              </p>
+              <p>
+              In this paper, we present <b>TinyGiantVLM</b>, a lightweight and
+              modular two-stage framework designed for physical spatial
+              reasoning, distinguishing itself from traditional geographic
+              reasoning in complex logistics scenes. Our approach encodes 
+              both global and region-level features from RGB and
+              depth modalities using pretrained visual backbones. To effectively 
+              handle the complexity of high-modality inputs and
+              diverse question types, we incorporate a Mixture-of-Experts
+              (MoE) fusion module, which dynamically combines spatial
+              representations to support downstream reasoning tasks and
+              improve convergence. Training is conducted in a two-phase
+              strategy: the first phase focuses on generating free-form answers 
+              to enhance spatial reasoning ability, while the second 
+              phase uses normalized answers for evaluation.
+              </p>
+              <p> 
+              Evaluated on Track 3 of the AI City Challenge 2025, our 64M-
+              parameter base model achieved 5th place on the leaderboard 
+              with a score of 66.8861, demonstrating strong performance 
+              in bridging visual perception and spatial understanding 
+              in industrial environments. We further present
+              an 80M-parameter variant with expanded MoE capacity,
+              which demonstrates improved performance on spatial reasoning tasks.
+              </p>
+              <!--/ Abstract. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr"></div>
+
+    <!-- Problem Statement  -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width has-text-justified">
+            <h2 class="title is-3 has-text-centered">
+              Problem Statement
+            </h2>
+            <div class="content has-text-centered">
+              <figure class="image is-inline-block" style="max-width: 800px; margin: 0 auto;">
+                <img
+                  src="./static/images/intro.png"
+                  alt="An example of multiple-choice question (MCQ) in the dataset."
+                />
+              </figure>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Warehouse Spa-tial Intelligence addresses this gap using the PhysicalAI-Spatial-Intelligence-Warehouse dataset for warehouse-scale
+                3D scene understanding through natural language questions. The challenge encompasses <b>four</b> distinct types of spatial reasoning tasks: 
+                <i><span style="color:#CFAC55">distance estimation</span></i>, 
+                <i><span style="color:#3399FF">object counting</span></i>, 
+                <i><span style="color:#97D077">multiple-choice questions (MCQ) for spatial grounding</span></i>, and 
+                <i><span style="color:#EA6B66">left/right spatial relation queries</span></i>.
+              </p>
+              <p>
+                In the figure above, we listed an example question & answer
+                pairs for multiple-choice questions (MCQ) type.
+              </p> 
+            </div>
+            <!-- <h3 class="title is-4"></h3>
+            <div class="content has-text-justified">
+              <p>
+                <b>Key insight:</b> We hypothesize that the limited the spatial
+                reasoning abilities of current VLMs is not due to a fundamental
+                limitation of their architecture, but rather is a limitation in
+                common datasets available at scale on which such models are
+                trained. We co-train a multimodal large language model on
+                synthetic spatial data to investigate this hypothesis.
+              </p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr"></div>
+
+    <!-- Method  -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-justified">
+            <h2 class="title is-3 has-text-centered">Method</h2>
+            <div class="content has-text-centered">
+              <img
+                src="./static/images/architecture_zoom400.png"
+                class="inline-figure-six"
+                alt="TinyGiantVLM Architecture."
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="columns">
+          <!-- Feature Extraction  -->
+          <div class="column">
+            <div class="content">
+              <h3 class="title is-4">Feature Extraction</h3>
+              <p>
+                Our method begins with a compact yet powerful feature extraction pipeline. By leveraging pretrained backbones 
+                on both RGB and depth inputs, we jointly encode global scene context and localized object features. This dual-stream 
+                representation enables the model to efficiently capture the multimodal spatial structure critical for fine-grained 
+                reasoning, while maintaining a small parameter footprint suitable for resource-constrained deployment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Expert-Driven Multimodal Fusion via MoE. -->
+          <div class="column">
+            <div class="content">
+              <h3 class="title is-4">Expert-Driven Multimodal Fusion via MoE</h3>
+              <p>
+                At the heart of TinyGiantVLM lies a Mixture-of-Experts (MoE) fusion module, specifically designed for spatial reasoning tasks. 
+                Instead of treating all spatial questions equally, our model learns to dynamically route inputs through specialized expert branches. 
+                Each expert specializes in a different reasoning pattern, and a learned gating mechanism dynamically selects the most relevant 
+                experts conditioned on the input.
+              </p>
+            </div>
+          </div>
+
+          <!-- Re-Inspection and Answer Generation.  -->
+          <div class="column">
+            <div class="content">
+              <h3 class="title is-4">Re-Inspection and Answer Generation</h3>
+              <p>
+                To further refine understanding of complex layouts, we introduce a re-inspection step that re-attends to key spatial relations before 
+                answer generation. This is integrated into a two-phase training paradigm: an initial phase encourages free-form reasoning to enhance 
+                flexibility, followed by a structured normalization phase optimized for benchmark evaluation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr"></div>
+
+    <!-- Results and Ablation Study. -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-justified">
+            <h2 class="title is-3 has-text-centered">Results and Ablation Study</h2>
+
+            <div class="content has-text-justified">
+              <p>
+                We conduct ablation experiments to assess the impact of
+                the two-phase training strategy. Phase 1 corresponds to 
+                free-form answers; Phase 2 corresponds to normalized answers. 
+                Scores are reported on the validation set.
+              </p>
+            </div>
+
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
+              <thead>
+                <tr style="background-color: #f5f5f5;">
+                  <th><strong>MoE</strong></th>
+                  <th><strong>Phase 1</strong></th>
+                  <th><strong>Phase 2</strong></th>
+                  <th><strong>Score (%)</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>✗</td>
+                  <td>✓</td>
+                  <td>✗</td>
+                  <td>25.59</td>
+                </tr>
+                <tr>
+                  <td>✗</td>
+                  <td>✗</td>
+                  <td>✓</td>
+                  <td>63.65</td>
+                </tr>
+                <tr>
+                  <td>✗</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>65.09</td>
+                </tr>
+                <tr class="has-background-success-light">
+                  <td>✓</td>
+                  <td>✗</td>
+                  <td>✓</td>
+                  <td><strong>68.13</strong></td>
+                </tr>
+                <tr>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="community-implementation">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-justified">
+            <h2 class="title is-3 has-text-centered">Challenge Leaderboard</h2>
+            <div class="content has-text-justified">
+              <p>
+                TinyGiantVLM ranks <b>5<sup>th</sup></b> on the public leaderboard of Track 3 in the AI City Challenge 2025, 
+                evaluated on 3D spatial reasoning tasks under resource constraints.
+              </p>
+            </div>
+
+            <table class="table is-striped is-hoverable is-bordered is-fullwidth">
+              <thead>
+                <tr style="background-color: #f5f5f5;">
+                  <th><strong>Rank</strong></th>
+                  <th><strong>Team Name</strong></th>
+                  <th><strong>Score (%)</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>UWIPL_ETRI</td>
+                  <td>95.8638</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>HCMUT.VNU</td>
+                  <td>91.9735</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Embia</td>
+                  <td>90.6772</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>MIZSU</td>
+                  <td>73.0606</td>
+                </tr>
+                <tr class="has-background-success-light">
+                  <td><strong>5</strong></td>
+                  <td><strong>HCMUS_HTH</strong></td>
+                  <td><strong>66.8861</strong></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>MealsRetrieval</td>
+                  <td>53.4763</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>BKU22</td>
+                  <td>50.3662</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Smart Lab</td>
+                  <td>31.9245</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>AICV</td>
+                  <td>28.2993</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr"></div>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title has-text-centered">BibTeX</h2>
+        <pre><code>@article{...,
+    author    = {Vinh-Thuan Ly and Hoang M. Truong and Xuan-Huong Nguyen},
+    title     = {TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints},
+    journal   = {...},
+    year      = {2025},
+}</code></pre>
+    </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>This website is built upon <a href="https://spatial-vlm.github.io/">Spatial-VLM</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  </body>
+</html>
